@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/favicon/favicon.svg" type="image/x-icon" />
+
+    <!-- Map CSS -->
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" />
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="./assets/css/libs.bundle.css" />
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="./assets/css/theme.bundle.css" />
+
+    <!-- Title -->
+    <title>Lịch sử hoạt động</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm" id="topnav" style="background-color: #ffffff;">
+
+        <div class="container-fluid">
+
+            <a href="index.html" class="close-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <path id="Path_30242" data-name="Path 30242"
+                        d="M1074,384.4l-1.4-1.4-6.6,6.6-6.6-6.6-1.4,1.4,6.6,6.6-6.6,6.6,1.4,1.4,6.6-6.6,6.6,6.6,1.4-1.4-6.6-6.6Z"
+                        transform="translate(-1058 -383)" fill="#505f79" />
+                </svg>
+            </a>
+
+            <div class="navbar-signing">
+                <div class="function-wrapper">
+                    <a href="#">
+                        <i class="fas fa-exclamation fa-xs" style="
+                        background: #7a869a;
+                        color: white;
+                        padding: 5px 8px;
+                        margin-right: 24px;
+                        border-radius: 4px;">
+                        </i>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-trash fa-xs" style="
+                            background: #7a869a;
+                            color: white;
+                            padding: 5px;
+                            margin-right: 24px;
+                            border-radius: 4px;">
+                        </i>
+                    </a>
+                </div>
+            </div>
+
+        </div> <!-- / .container -->
+
+    </nav>
+
+    <div class="container-fluid">
+        <div class="signing-content-wrapper">
+            <div class="row">
+
+                <div class="col-12 col-sm-6">
+                    <div class="request-text">
+                        <div class="state-request waiting">Chờ ký</div>
+                        <div class="file-name-request">Hợp đồng dịch vụ mua bán thiết bị.docx.</div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6">
+                    <div class="request-info">
+                        <button type="button" class="btn btn-outline-danger" style="border-radius: 2px; width: 120px; height: 36px;font-size: 14px;">Từ chối</button>
+                        <div class="btn-group">
+                            <button type="button" class="btn" style="background-color: #0052cc; border-radius: 2px 0 0 2px; color: white; width: 158px; height: 36px;margin-left: 12px;font-size: 14px;">Ký bằng USB Token</button>
+                            <button onClick="updateDropdown()" type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: #0052cc; color: white;height: 36px; border-radius: 0 2px 2px 0; padding-top: 6px;">
+                              <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                              <li><a class="dropdown-item" href="#">Ký bằng USB Token</a></li>
+                              <li><a class="dropdown-item" href="#">Ký bằng Mobile Sign</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" style="background-color: #f4f5f8;">
+        <div class="signing-content-wrapper">
+            <div class="row">
+
+                <div class="col-12">
+
+                    <nav class="nav py-2">
+                        <a class="sign-link" aria-current="page" href="digital-signing.html">Nội dung văn bản</a>
+                        <a class="sign-link active" href="activity-signing.html">Lịch sử hoạt động</a>
+                    </nav>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="signing-content-wrapper">
+            <div class="row">
+
+                <div class="request-information">Thông tin chi tiết</div>
+
+                <div class="col-12 col-sm-6">
+                    <div class="content-wrapper">
+                        <div class="title-content">Tiêu đề mail</div>
+                        <div class="subtitle-content">Hợp đồng dịch vụ VMI-NACENCOMM 13.7.20.docx.</div>
+                    </div>
+                    <div class="content-wrapper">
+                        <div class="title-content">ID Văn bản</div>
+                        <div class="subtitle-content">647b1951-4d66-416f-8b84-5ac5e7a01d14</div>
+                    </div>
+                    <div class="content-wrapper">
+                        <div class="title-content">Ngày tạo văn bản</div>
+                        <div class="subtitle-content">15:05 13/12/2020</div>
+                    </div>
+                    <div class="content-wrapper">
+                        <div class="title-content">Ngày gửi</div>
+                        <div class="subtitle-content">15:05 15/12/2020</div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6">
+                    <div class="content-wrapper">
+                        <div class="title-content">Tên văn bản</div>
+                        <div class="subtitle-content">Hợp đồng dịch vụ VMI-NACENCOMM 13.7.20.docx.</div>
+                    </div>
+                    <div class="content-wrapper">
+                        <div class="title-content">Người gửi</div>
+                        <div class="subtitle-content">Trần Văn Khanh</div>
+                        <div class="grey-table-text" style="font-size: 13px;">tranvankhanh123@gmail.com</div>
+                    </div>
+                    <div class="content-wrapper">
+                        <div class="title-content">Trạng thái</div>
+                        <div class="subtitle-content blue">Đang tiến hành</div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="title-content">Người nhận</div>
+                    <div class="recipient-wrapper">
+                        <div class="recipient-info">
+                            <div class="info-wrapper">
+                                <div class="subtitle-content">Nguyễn Thu Hồng</div>
+                                <div class="grey-table-text" style="font-size: 13px;">hongktqd@nacencomm.vn</div>
+                            </div>
+                            <span class="recipient-role"><i class="far fa-edit" style="margin-right: 6px;"></i>Ký tài liệu</span>
+                        </div>
+                        <div class="recipient-info">
+                            <div class="info-wrapper">
+                                <div class="subtitle-content">Trần Thu Thảo</div>
+                                <div class="grey-table-text" style="font-size: 13px;">thaotomnic@nacencomm.vn</div>
+                            </div>
+                            <span class="recipient-role"><i class="far fa-copy" style="margin-right: 6px;"></i>Nhận bản sao</span>
+                        </div>
+                        <div class="recipient-info">
+                            <div class="info-wrapper">
+                                <div class="subtitle-content">Nguyễn Hoàng Hải</div>
+                                <div class="grey-table-text" style="font-size: 13px;">hainh@nacencomm.vn</div>
+                            </div>
+                            <span class="recipient-role"><i class="far fa-edit" style="margin-right: 6px;"></i>Ký tài liệu</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="activity-information">Lịch sử hoạt động</div>
+                <div class="mb-5">
+                    <div class="table-responsive">
+                    <table class="table table-sm card-table" style="background-color: #f4f5f7;">
+                        <colgroup>
+                            <col width="324" />
+                            <col width="170" />
+                            <col width="310" />
+                            <col width="135" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>
+                                    <a href="#" class="text-muted">
+                                        Người dùng
+                                    </a>
+                                </th>
+                                <th>
+                                    <a href="#" class="text-muted list-sort" data-sort="orders-product">
+                                        Thời gian
+                                    </a>
+                                </th>
+                                <th>
+                                    <a href="#" class="text-muted">
+                                        Hoạt động
+                                    </a>
+                                </th>
+                                <th>
+                                    <a href="#" class="text-muted">
+                                        Trạng thái
+                                    </a>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="list">
+                            <tr>
+                                <td class="orders-order align-top">
+                                    Nguyễn Trần Văn Khanh
+                                    <div class="grey-table-text">nguyentranvankhanh123@gmail.com</div>
+                                </td>
+                                <td class="orders-product align-top">
+                                    <time datetime="2018-07-30">17/12/2020</time>
+                                    <div class="grey-table-text">10:25:25 AM</div>
+                                </td>
+                                <td class="orders-date">
+                                    Tạo văn bản
+                                    <div class="grey-table-text">Nguyễn Trần Văn Khanh đã tạo văn bản
+                                        (Hợp đồng dịch vụ VMI-NACENCOMM 13.7.20.docx.)</div>
+                                </td>
+                                <td class="orders-total align-top">
+                                    Đang tiến hành
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="orders-order align-top">
+                                    Nguyễn Trần Văn Khanh
+                                    <div class="grey-table-text">nguyentranvankhanh123@gmail.com</div>
+                                </td>
+                                <td class="orders-product align-top">
+                                    <time datetime="2018-07-30">17/12/2020</time>
+                                    <div class="grey-table-text">10:25:25 AM</div>
+                                </td>
+                                <td class="orders-date">
+                                    Tạo văn bản
+                                    <div class="grey-table-text">Nguyễn Trần Văn Khanh đã tạo văn bản
+                                        (Hợp đồng dịch vụ VMI-NACENCOMM 13.7.20.docx.)</div>
+                                </td>
+                                <td class="orders-total align-top">
+                                    Đang tiến hành
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="orders-order align-top">
+                                    Nguyễn Trần Văn Khanh
+                                    <div class="grey-table-text">nguyentranvankhanh123@gmail.com</div>
+                                </td>
+                                <td class="orders-product align-top">
+                                    <time datetime="2018-07-30">17/12/2020</time>
+                                    <div class="grey-table-text">10:25:25 AM</div>
+                                </td>
+                                <td class="orders-date">
+                                    Tạo văn bản
+                                    <div class="grey-table-text">Nguyễn Trần Văn Khanh đã tạo văn bản
+                                        (Hợp đồng dịch vụ VMI-NACENCOMM 13.7.20.docx.)</div>
+                                </td>
+                                <td class="orders-total align-top">
+                                    Đang tiến hành
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        function updateDropdown() {
+            $('.dropdown-menu a').on('click', function(e){
+                e.preventDefault();
+            var anchor = $(e.currentTarget);
+            var href = anchor.attr('href');
+            var text = anchor.text();
+                var button = anchor.closest('.btn-group').find('button:first-child');
+            button.attr('data-url', href);
+            button.text(text);
+            button.on('click', gotoUrl);
+            });
+
+            function gotoUrl(e){
+            e.preventDefault();
+            //use window.open because we can't open these urls in jsfiddle.
+            window.open($(e.currentTarget).attr('data-url'));
+
+            //Maybe this is what you want in your site.
+            //window.location.href = $(e.currentTarget).attr('data-url')
+
+            }
+        }
+    </script>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/040b683dcd.js" crossorigin="anonymous"></script>
+
+    <!-- jQuery -->
+    <script src="/assets/js/jquery-3.0.0.min.js"></script>
+
+    <!-- Map JS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+    <!-- Vendor JS -->
+    <script src="./assets/js/vendor.bundle.js"></script>
+
+    <!-- Theme JS -->
+    <script src="./assets/js/theme.bundle.js"></script>
+
+</body>
+
+</html>

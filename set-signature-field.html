@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/favicon/favicon.svg" type="image/x-icon" />
+
+    <!-- Map CSS -->
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" />
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="./assets/css/libs.bundle.css" />
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="./assets/css/theme.bundle.css" />
+
+    <!-- Title -->
+    <title>Thiết lập vùng ký</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm px-0" id="topnav" style="background-color: #ffffff;">
+
+        <a href="prepare_and_send.html" class="close-button">
+            <i class="fas fa-chevron-left" style="color: #253858;"></i>
+        </a>
+
+        <div class="file-name">Hợp đồng dịch vụ mua bán thiết bị.docx.</div>
+
+        <button type="button" class="btn position-absolute top-0 end-0" style="background-color: #4c9aff; color: white;border-radius: 0px; height: 100%;"><i class="fas fa-check"></i></button>
+
+    </nav>
+
+    <div>
+        
+        <div>
+            <select name="state-select" id="state-select" class="signer-select">
+                <option value="signer1">#1 - Chris Hoang</option>
+                <option value="signer2">#2 - Cao Yến Thảo</option>
+                <option value="signer3">#3 - Nguyễn Thị Thu Hồng</option>
+                <option value="signer4">#4 - Loan Láo Lếu</option>
+            </select>
+        </div>
+                           
+        <div style="height: 100vh;">
+            <iframe id="fred" title="PDF in an i-Frame" src="/assets/img/demopdf.pdf" frameborder="1" scrolling="auto" height="100%" width="100%" ></iframe>
+        </div>
+
+    </div>
+
+    <!-- JAVASCRIPT -->
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/040b683dcd.js" crossorigin="anonymous"></script>
+
+    <!-- Ca2.edoc JS -->
+    <script src="/assets/js/create-signature-request.js"></script>
+
+    <!-- Map JS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+    <!-- Vendor JS -->
+    <script src="./assets/js/vendor.bundle.js"></script>
+
+    <!-- Theme JS -->
+    <script src="./assets/js/theme.bundle.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/favicon/favicon.svg" type="image/x-icon" />
+
+    <!-- Map CSS -->
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" />
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="./assets/css/libs.bundle.css" />
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="./assets/css/theme.bundle.css" />
+
+    <!-- Title -->
+    <title>Thiết lập và gửi</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm mb-5" id="topnav" style="background-color: #ffffff;">
+
+        <div class="container-fluid">
+
+            <a href="index.html" class="close-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <path id="Path_30242" data-name="Path 30242"
+                        d="M1074,384.4l-1.4-1.4-6.6,6.6-6.6-6.6-1.4,1.4,6.6,6.6-6.6,6.6,1.4,1.4,6.6-6.6,6.6,6.6,1.4-1.4-6.6-6.6Z"
+                        transform="translate(-1058 -383)" fill="#505f79" />
+                </svg>
+            </a>
+
+            <div class="navbar-upload">
+                <a href="#" class="text-link">1. Tải lên tài liệu</a>
+                <a href="#" class="text-link active">2. Thiết lập và gửi</a>
+            </div>
+
+        </div> <!-- / .container -->
+
+    </nav>
+
+    <div class="container-fluid">
+        <div class="upload-content-wrapper">
+            <div class="row">
+
+                <div class="col-12">
+
+                    <p class="h2">Thiết lập người nhận & vùng ký</p>
+
+                    <div class="sender-block">
+                        <div class="sender-title">Người gửi</div>
+                        <div class="sender-name">Chris Hoang</div>
+                    </div>
+
+                    <div class="request-info-block">
+                        <div class="title-request">1. Thiết lập người nhận</div>
+                        <div class="content-request">
+
+                            <div class="request-function">
+                                <div class="form-check">
+                                    <input type="checkbox" id="enable-ordering" name="checkbox" class="form-check-input" disabled />
+                                    <label class="form-check-label" for="enable-ordering">
+                                        Thiết lập thứ tự ký
+                                    </label>
+                                </div>
+                                <div>
+                                    <a href="#" id="add-recipient-button" class="add-person-button"><i class="fas fa-plus" style="margin-right: 6px;"></i>Thêm người nhận</a>
+                                </div>
+                            </div>
+
+                            <form action="#" method="POST">
+
+                                <div id="recipient-list">
+                                    <div id="original-recipient-block" class="recipient">
+
+                                        <div class="container-fluid px-0">
+                                            <div class="row">
+
+                                                <div class="col-12 col-sm-5 col-md-1">
+                                                    <div class="position-relative order-rectangle">
+                                                        <input id="order-input" type="text" name="recipient[][order]" class="order-text hidden-block">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12 col-sm-5 col-md-4">
+                                                    <input id="name" type="text" class="text-field-3 w-input" name="recipient[][name]" placeholder="Họ và tên" required />
+                                                </div>
+
+                                                <div class="col-12 col-sm-5 col-md-4">
+                                                    <input id="email" type="email" class="text-field-2 w-input" name="recipient[][email]" placeholder="Email" required />
+                                                </div>
+
+                                                <div class="col-12 col-sm-5 col-md-2">
+                                                    <select class="sign-select" name="recipient[][action]" id="role-sign">
+                                                        <option value="sign-now">Ký tài liệu</option>
+                                                        <option value="receive-a-copy">Nhận bản sao</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="col-12 col-sm col-md position-relative">
+                                                    <a href="#" class="position-absolute top-50 translate-middle" style="left: 45px;">
+                                                        <img class="delete-recipient-button" src="/assets/img/delete-recipient.svg" alt="delete-icon"/>
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="form-recipient-button">
+                                    <button id="reset-button" type="button"></button>
+                                    <button id="submit-button" type="submit"></button>
+                                </div>
+
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <div class="position-relative mt-5">
+                        <div class="position-absolute top-0 end-0">
+                            <button id="reset-btn" type="button" class="btn btn-outline-primary" style="height: 28px; width: 84px; border-radius: 2px; padding-top: 3px;">Reset</button>
+                            <button id="submit-btn" class="btn ms-3" type="submit" style="height: 28px; width: 28px; border-radius: 2px; padding-top: 2px; padding-left: 7px; background-color: #4c9aff; color: white;"><i class="fas fa-check fa-xs"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="request-info-block mt-7">
+                        <div class="title-request">2. Thiết lập vùng ký</div>
+                        <a href="#" class="content-request d-flex align-items-center justify-content-between">                          
+                            <div>
+                                <div class="bold-text-sign">Thiết lập vùng ký cố định</div>
+                                <div class="grey-text-sign">0/4 trường ký</div>
+                            </div>
+                            <span class="set-signature-text" href="#">Thiết lập<i class="fas fa-chevron-right fa-sm ms-3"></i></span>
+                        </a>
+                    </div>
+
+                    <div class="request-info-block mt-5">
+                        <div class="title-request">3. Email gửi đi</div>
+                        <div href="#" class="content-request">
+                            <form action="#" method="post">
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Tiêu đề Email">
+                                </div>
+                                <div class="mb-3">
+                                    <textarea placeholder="Ghi chú - Trích yếu văn bản" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="position-relative mt-6">
+                        <div class="position-absolute top-0 end-0 pb-6">
+                            <button id="reset-btn" type="button" class="btn btn-outline-primary" style="height: 36px; width: 120px; border-radius: 2px; padding-top: 7px;">Quay lại</button>
+                            <button id="submit-btn" class="btn ms-3" type="submit" style="height: 36px; width: 120px; border-radius: 2px; padding-top: 7px; padding-left: 10px; background-color: #0052cc; color: white;">Gửi yêu cầu</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/040b683dcd.js" crossorigin="anonymous"></script>
+
+    <!-- Ca2.edoc JS -->
+    <script src="/assets/js/create-signature-request.js"></script>
+
+    <!-- Map JS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+    <!-- Vendor JS -->
+    <script src="./assets/js/vendor.bundle.js"></script>
+
+    <!-- Theme JS -->
+    <script src="./assets/js/theme.bundle.js"></script>
+
+</body>
+
+</html>
